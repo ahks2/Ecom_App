@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 
 const AppColors = {
-  primary: "#000",
+  primary: "orange",
   white: "#fff",
   black: "#000",
   lightGrey: "#f0f0f0",

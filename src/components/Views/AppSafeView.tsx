@@ -18,7 +18,7 @@ interface AppSafeViewProps {
 
 const AppSafeView: FC<AppSafeViewProps> = ({ children, style }) => {
   return (
-    <SafeAreaView style={styles.safeArea}>
+    <SafeAreaView style={styles.safeArea} edges={["top"]}>
       <View style={[styles.container, style]}>{children}</View>
     </SafeAreaView>
   );
@@ -29,10 +29,11 @@ export default AppSafeView;
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: AppColors.white,
+    backgroundColor: AppColors.primary,
     paddingTop: IS_Android ? StatusBar.currentHeight || 0 : 0,
   },
   container: {
     flex: 1,
+    backgroundColor: AppColors.white,
   },
 });

@@ -8,29 +8,15 @@ import AppButton from "../../components/Buttons/AppButton";
 import { AppFonts } from "../../styles/Fonts";
 import AppColors from "../../styles/Colors";
 import { s } from "react-native-size-matters";
+import { useNavigation } from "@react-navigation/native";
+import HomeScreen from "../home/HomeScreen";
+import EmptyCartScreen from "./EmptyCart";
 
 const CartScreen = () => {
+  const navigation = useNavigation();
   return (
     <AppSafeView>
-      <HomeHeader />
-      <View style={styles.container}>
-        <Ionicons name="bag-handle" size={70} color="black" />
-        <AppText style={{ fontFamily: AppFonts.Bold }}>
-          {" "}
-          Your Cart is Empty
-        </AppText>
-        <AppText
-          style={{ fontFamily: AppFonts.Medium, color: AppColors.medGray }}
-        >
-          {" "}
-          Browse our products and find something you like
-        </AppText>
-        <AppButton
-          onPress={() => {}}
-          title="Start Shopping"
-          style={{ width: "80%" }}
-        />
-      </View>
+      <EmptyCartScreen />
     </AppSafeView>
   );
 };

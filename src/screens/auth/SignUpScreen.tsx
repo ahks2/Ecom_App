@@ -9,32 +9,34 @@ import AppText from "../../components/texts/AppText";
 import AppButton from "../../components/Buttons/AppButton";
 import AppColors from "../../styles/Colors";
 import { useNavigation } from "@react-navigation/native";
-
+import HomeHeader from "../../components/headers/HomeHeader";
 const SignUpScreen = () => {
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigation = useNavigation();
   return (
-    <AppSafeView style={styles.container}>
-      <Image source={IMAGES.appLogo} style={styles.logo} />
-      <AppTextInputs placeholder="Username" onChangeText={setUserName} />
+      <AppSafeView >
+      <HomeHeader />
+      <View style={styles.container}>
+        <Image source={IMAGES.appLogo} style={styles.logo} />
+        <AppTextInputs placeholder="Username" onChangeText={setUserName} />
 
-      <AppTextInputs placeholder="Email" onChangeText={setEmail} />
-      <AppTextInputs
-        placeholder="Password"
-        onChangeText={setPassword}
-        secureTextEntry
-      />
-      <AppText style={styles.appName}>Smart E-Commerce</AppText>
-      <AppButton title="Create New Account" />
-      <AppButton
-        title="Go to Sign in"
-        style={styles.SignInButton}
-        textColor={AppColors.primary}
-        onPress={() => navigation.navigate("SignInScreen")}
-      />
-    </AppSafeView>
+        <AppTextInputs placeholder="Email" onChangeText={setEmail} />
+        <AppTextInputs
+          placeholder="Password"
+          onChangeText={setPassword}
+          secureTextEntry
+        />
+        <AppText style={styles.appName}>Smart E-Commerce</AppText>
+        <AppButton title="Create New Account" />
+        <AppButton
+          title="Go to Sign in"
+          style={styles.SignInButton}
+          textColor={AppColors.primary}
+          onPress={() => navigation.navigate("SignInScreen")}
+        /></View>
+      </AppSafeView>
   );
 };
 

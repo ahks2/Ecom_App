@@ -9,32 +9,35 @@ import AppText from "../../components/texts/AppText";
 import AppButton from "../../components/Buttons/AppButton";
 import AppColors from "../../styles/Colors";
 import { useNavigation } from "@react-navigation/native";
-
+import HomeHeader from "../../components/headers/HomeHeader";
 const SignInScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigation = useNavigation();
 
   return (
-    <AppSafeView style={styles.container}>
-      <Image source={IMAGES.appLogo} style={styles.logo} />
-      <AppTextInputs placeholder="Email" onChangeText={setEmail} />
-      <AppTextInputs
-        placeholder="Password"
-        onChangeText={setPassword}
-        secureTextEntry
-      />
-      <AppText style={styles.appName}>Smart E-Commerce</AppText>
-      <AppButton
-        title="Login"
-        onPress={() => navigation.navigate("MainAppBottomTabs")}
-      />
-      <AppButton
-        title="Sign Up"
-        style={styles.registerButton}
-        textColor={AppColors.primary}
-        onPress={() => navigation.navigate("SignUpScreen")}
-      />
+    <AppSafeView>
+      <HomeHeader />
+      <View style={styles.container}>
+        <Image source={IMAGES.appLogo} style={styles.logo} />
+        <AppTextInputs placeholder="Email" onChangeText={setEmail} />
+        <AppTextInputs
+          placeholder="Password"
+          onChangeText={setPassword}
+          secureTextEntry
+        />
+        <AppText style={styles.appName}>Smart E-Commerce</AppText>
+        <AppButton
+          title="Login"
+          onPress={() => navigation.navigate("MainAppBottomTabs")}
+        />
+        <AppButton
+          title="Sign Up"
+          style={styles.registerButton}
+          textColor={AppColors.primary}
+          onPress={() => navigation.navigate("SignUpScreen")}
+        />
+      </View>
     </AppSafeView>
   );
 };

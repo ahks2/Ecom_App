@@ -3,6 +3,7 @@ import React from "react";
 import AppColors from "../../styles/Colors";
 import { vs, s } from "react-native-size-matters";
 import { IMAGES } from "../../constants/Images-Paths";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const HomeHeader = () => {
   return (
@@ -21,8 +22,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   logo: {
-    height: vs(40),
-    width: s(120),
+    height: vs(30),
+    width: s(160),
     tintColor: AppColors.white,
+    marginBottom: vs(5),
   },
 });

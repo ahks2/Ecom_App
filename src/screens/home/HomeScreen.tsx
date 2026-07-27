@@ -13,6 +13,7 @@ const HomeScreen = () => {
     <AppSafeView>
       <HomeHeader />
       <FlatList
+        style={{ paddingTop: vs(10) }}
         numColumns={2}
         data={products}
         keyExtractor={(item) => item.id.toString()}

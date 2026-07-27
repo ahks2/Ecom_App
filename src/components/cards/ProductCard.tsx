@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
   titleText: {
     fontSize: s(14),
     fontFamily: AppFonts.Medium,
-    color: AppColors.primary,
+    color: AppColors.black,
   },
   priceText: {
     fontSize: s(14),
