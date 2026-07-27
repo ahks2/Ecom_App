@@ -47,8 +47,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: sharedPaddingHorizontal,
   },
   logo: {
-    height: s(150),
-    width: s(150),
+    height: s(200),
+    width: s(200),
     marginTop: vs(30),
     marginBottom: vs(10),
   },
