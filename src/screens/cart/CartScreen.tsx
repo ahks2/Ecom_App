@@ -11,12 +11,16 @@ import { s } from "react-native-size-matters";
 import { useNavigation } from "@react-navigation/native";
 import HomeScreen from "../home/HomeScreen";
 import EmptyCartScreen from "./EmptyCart";
+import CartItem from "../../components/cart/CartItem";
 
 const CartScreen = () => {
   const navigation = useNavigation();
   return (
     <AppSafeView>
-      <EmptyCartScreen />
+      {" "}
+      <HomeHeader />
+      <CartItem />
+      {/* <EmptyCartScreen /> */}
     </AppSafeView>
   );
 };
