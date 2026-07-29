@@ -7,8 +7,11 @@ import AppText from "../../components/texts/AppText";
 import ProductCard from "../../components/cards/ProductCard";
 import { products } from "../../data/Products";
 import { s, vs } from "react-native-size-matters";
+import { useDispatch } from "react-redux";
+import { addItemToCart } from "../../store/reducers/CartSlice";
 
 const HomeScreen = () => {
+  const dispatch = useDispatch();
   return (
     <AppSafeView>
       <HomeHeader />
@@ -26,7 +29,9 @@ const HomeScreen = () => {
         }}
         renderItem={({ item }) => (
           <ProductCard
-            onAddToCardPress={() => null}
+            onAddToCardPress={() => {
+              dispatch(addItemToCart(item));
+            }}
             imageURL={item.imageURL}
             title={item.title}
             price={item.price}

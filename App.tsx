@@ -11,6 +11,9 @@ import MainAppStack from "./src/navigations/MainAppStack";
 import { useFonts } from "expo-font";
 import { StatusBar } from "expo-status-bar";
 import AppColors from "./src/styles/Colors";
+import { Provider } from "react-redux";
+import { store } from "./src/store/Store";
+
 export default function App() {
   const [fontsLoaded] = useFonts({
     "Nunito-bold": require("./src/asssets/fonts/Nunito-Bold.ttf"),
@@ -25,12 +28,14 @@ export default function App() {
   return (
     <>
       <StatusBar style="light" backgroundColor={AppColors.primary} />
-      <NavigationContainer>
-        <FlashMessage position={"top"} />
-        <AppSafeView>
-          <MainAppStack />
-        </AppSafeView>
-      </NavigationContainer>
+      <Provider store={store}>
+        <NavigationContainer>
+          <FlashMessage position={"top"} />
+          <AppSafeView>
+            <MainAppStack />
+          </AppSafeView>
+        </NavigationContainer>
+      </Provider>
     </>
   );
 }

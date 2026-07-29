@@ -16,26 +16,56 @@ import TotalsView from "../../components/cart/TotalsView";
 import { products } from "../../data/Products";
 import { sharedPaddingHorizontal } from "../../styles/SharedStyles";
 import CheckoutScreen from "./CheckoutScreen";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../store/Store";
+import {
+  addItemToCart,
+  removeItemFromCart,
+  removeProductFromCart,
+} from "../../store/reducers/CartSlice";
+import { taxes, shippingFees } from "../../constants/Constants";
 
 const CartScreen = () => {
   const navigation = useNavigation();
+  const { items } = useSelector((state: RootState) => state.cartSlice);
+  const dispatch = useDispatch();
+  const totalProductsPriceSum = items.reduce((acc, item) => acc + item.sum, 0);
+  const orderTotal = totalProductsPriceSum
+    ? totalProductsPriceSum + taxes + shippingFees
+    : 0;
   return (
     <AppSafeView>
       <HomeHeader />
-      <View style={{ flex: 1, paddingHorizontal: sharedPaddingHorizontal }}>
-        <FlatList
-          data={products}
-          keyExtractor={(item) => item.id.toString()}
-          renderItem={({ item }) => <CartItem {...item} />}
-          showsVerticalScrollIndicator={false}
-        />
-        <TotalsView Items_Price={1000} Order_Total={5000} />
-        <AppButton
-          title="Continue"
-          onPress={() => navigation.navigate("CheckoutScreen")}
-        />
-        {/* <EmptyCartScreen /> */}
-      </View>
+      {!totalProductsPriceSum ? (
+        <EmptyCartScreen />
+      ) : (
+        <View style={{ flex: 1, paddingHorizontal: sharedPaddingHorizontal }}>
+          <FlatList
+            data={items}
+            keyExtractor={(item) => item.id.toString()}
+            renderItem={({ item }) => (
+              <CartItem
+                {...item}
+                price={item.sum}
+                onDeletePress={() => dispatch(removeProductFromCart(item))}
+                onReducePress={() => dispatch(removeItemFromCart(item))}
+                onIncreasePress={() => dispatch(addItemToCart(item))}
+              />
+            )}
+            showsVerticalScrollIndicator={false}
+          />
+          <TotalsView
+            Items_Price={totalProductsPriceSum}
+            Order_Total={orderTotal}
+            Taxes={totalProductsPriceSum ? taxes : 0}
+            Shipping_Fee={totalProductsPriceSum ? shippingFees : 0}
+          />
+          <AppButton
+            title="Continue"
+            onPress={() => navigation.navigate("CheckoutScreen")}
+          />
+        </View>
+      )}
     </AppSafeView>
   );
 };

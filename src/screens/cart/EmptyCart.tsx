@@ -15,7 +15,7 @@ const EmptyCartScreen = () => {
   const navigation = useNavigation();
   return (
     <AppSafeView>
-      <HomeHeader />
+      {/* <HomeHeader /> */}
       <View style={styles.container}>
         <Ionicons
           name="bag-handle"
