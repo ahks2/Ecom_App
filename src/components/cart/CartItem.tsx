@@ -22,7 +22,7 @@ const tempItem = {
 interface CartItemProps {
   title: string;
   price: number | string;
-  imageUrl: string;
+  imageURL: string;
   qty: number;
   onDeletePress: () => void;
   onIncreasePress: () => void;
@@ -31,7 +31,7 @@ interface CartItemProps {
 const CartItem: FC<CartItemProps> = ({
   title,
   price,
-  imageUrl,
+  imageURL,
   qty,
   onDeletePress,
   onIncreasePress,
@@ -41,11 +41,10 @@ const CartItem: FC<CartItemProps> = ({
     <View style={styles.container}>
       {/* Image container */}
       <View style={styles.imageContainer}>
-        {" "}
         <Image
           style={styles.image}
           source={{
-            uri: imageUrl,
+            uri: imageURL,
           }}
         />
       </View>
@@ -53,7 +52,7 @@ const CartItem: FC<CartItemProps> = ({
       {/* Details container */}
       <View style={styles.detailsContainer}>
         <AppText style={styles.textTitle}>{title}</AppText>
-        <AppText style={styles.textPrice}>{price}</AppText>
+        <AppText style={styles.textPrice}>$ {price}</AppText>
 
         <View style={styles.qtyContainer}>
           <Pressable onPress={onIncreasePress} style={styles.iconButton}>
