@@ -10,12 +10,13 @@ import AppColors from "../../styles/Colors";
 import { s, vs } from "react-native-size-matters";
 import { useNavigation } from "@react-navigation/native";
 import HomeScreen from "../home/HomeScreen";
+import { useTranslation } from "react-i18next";
 
 const EmptyCartScreen = () => {
+  const { t } = useTranslation();
   const navigation = useNavigation();
   return (
     <AppSafeView>
-      {/* <HomeHeader /> */}
       <View style={styles.container}>
         <Ionicons
           name="bag-handle"
@@ -23,14 +24,11 @@ const EmptyCartScreen = () => {
           color={AppColors.primary}
           style={styles.Icon}
         />
-        <AppText style={styles.title}> Your Cart is Empty</AppText>
-        <AppText style={styles.subTitle}>
-          {" "}
-          Browse our products and find something you like
-        </AppText>
+        <AppText style={styles.title}>{t("cart.emptyTitle")}</AppText>
+        <AppText style={styles.subTitle}>{t("cart.emptySubtitle")}</AppText>
         <AppButton
           onPress={() => navigation.navigate("Home")}
-          title="Start Shopping"
+          title={t("cart.startShopping")}
           style={styles.Button}
         />
       </View>

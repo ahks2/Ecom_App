@@ -13,6 +13,12 @@ import { StatusBar } from "expo-status-bar";
 import AppColors from "./src/styles/Colors";
 import { Provider } from "react-redux";
 import { store } from "./src/store/Store";
+import HomeHeader from "./src/components/headers/HomeHeader";
+import i18n from "./src/Localization/I18n";
+import { I18nextProvider } from "react-i18next";
+import { SheetProvider } from "react-native-actions-sheet";
+import "H:/HTML/Ecom_App/src/Localization/Sheets";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -27,15 +33,21 @@ export default function App() {
   }
   return (
     <>
-      <StatusBar style="light" backgroundColor={AppColors.primary} />
-      <Provider store={store}>
-        <NavigationContainer>
-          <FlashMessage position={"top"} />
-          <AppSafeView>
-            <MainAppStack />
-          </AppSafeView>
-        </NavigationContainer>
-      </Provider>
+      {/* <StatusBar style="light" backgroundColor={AppColors.primary} /> */}
+
+      <AppSafeView>
+        <Provider store={store}>
+          <I18nextProvider i18n={i18n}>
+            <SheetProvider>
+              <NavigationContainer>
+                <FlashMessage position={"top"} />
+                <HomeHeader />
+                <MainAppStack />
+              </NavigationContainer>
+            </SheetProvider>
+          </I18nextProvider>
+        </Provider>
+      </AppSafeView>
     </>
   );
 }

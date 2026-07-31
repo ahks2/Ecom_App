@@ -1,9 +1,9 @@
 import { StyleSheet, Text, TextInput, TextStyle, View } from "react-native";
 import React, { FC } from "react";
-import { vs, s } from "react-native-size-matters";
+import { s, vs } from "react-native-size-matters";
 import AppColors from "../../styles/Colors";
 
-interface AppTextInputsProps {
+interface AppTextInputProps {
   value: string;
   onChangeText: (text: string) => void;
   placeholder: string;
@@ -11,7 +11,8 @@ interface AppTextInputsProps {
   keyboardType?: "default" | "email-address" | "numeric";
   style?: TextStyle;
 }
-const AppTextInputs: FC<AppTextInputsProps> = ({
+
+const AppTextInput: FC<AppTextInputProps> = ({
   value,
   onChangeText,
   placeholder,
@@ -31,7 +32,7 @@ const AppTextInputs: FC<AppTextInputsProps> = ({
   );
 };
 
-export default AppTextInputs;
+export default AppTextInput;
 
 const styles = StyleSheet.create({
   input: {
@@ -39,9 +40,9 @@ const styles = StyleSheet.create({
     borderRadius: s(25),
     borderWidth: 1,
     borderColor: AppColors.borderColor,
-    paddingHorizontal: 15,
-    fontSize: 16,
-    backgroundColor: "white",
+    paddingHorizontal: s(15),
+    fontSize: s(16),
+    backgroundColor: AppColors.white,
     width: "100%",
     marginBottom: vs(10),
   },

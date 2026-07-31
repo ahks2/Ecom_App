@@ -14,7 +14,6 @@ const HomeScreen = () => {
   const dispatch = useDispatch();
   return (
     <AppSafeView>
-      <HomeHeader />
       <FlatList
         style={{ paddingTop: vs(10) }}
         numColumns={2}

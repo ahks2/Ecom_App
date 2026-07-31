@@ -1,0 +1,82 @@
+{
+  "app": {
+    "name": "التجارة الإلكترونية الذكية"
+  },
+  "auth": {
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "login": "تسجيل الدخول",
+    "signUp": "إنشاء حساب",
+    "userName": "اسم المستخدم",
+    "createAccount": "إنشاء حساب جديد",
+    "goToSignIn": "الذهاب إلى تسجيل الدخول"
+  },
+  "validation": {
+    "emailRequired": "البريد الإلكتروني مطلوب.",
+    "invalidEmail": "يرجى إدخال بريد إلكتروني صالح.",
+    "passwordRequired": "كلمة المرور مطلوبة.",
+    "passwordMin": "يجب أن تحتوي كلمة المرور على 6 أحرف على الأقل.",
+    "userNameRequired": "اسم المستخدم مطلوب.",
+    "userNameMin": "يجب أن يحتوي اسم المستخدم على 5 أحرف على الأقل."
+  },
+  "messages": {
+    "userCreated": "تم إنشاء المستخدم بنجاح.",
+    "userNotFound": "المستخدم غير موجود.",
+    "wrongCredentials": "البريد الإلكتروني أو كلمة المرور غير صحيحة.",
+    "emailAlreadyInUse": "هذا البريد الإلكتروني مستخدم بالفعل.",
+    "weakPassword": "كلمة المرور ضعيفة جدًا.",
+    "genericError": "حدث خطأ غير متوقع."
+  },
+  "profile": {
+    "hello": "مرحباً",
+    "myOrders": "طلباتي",
+    "language": "اللغة",
+    "logout": "تسجيل الخروج"
+  },
+  "language": {
+    "title": "تغيير اللغة",
+    "english": "الإنجليزية",
+    "arabic": "العربية",
+    "confirm": "تأكيد"
+  },
+  "cart": {
+    "continue": "متابعة",
+    "emptyTitle": "سلة التسوق فارغة",
+    "emptySubtitle": "تصفح منتجاتنا واعثر على شيء يعجبك.",
+    "startShopping": "ابدأ التسوق",
+    "title": "سلة التسوق",
+    "empty": "سلة التسوق الخاصة بك فارغة.",
+
+    "checkout": "إتمام الطلب",
+    "itemsPrice": "سعر المنتجات",
+    "shippingFee": "رسوم الشحن",
+    "taxes": "الضرائب",
+    "orderTotal": "إجمالي الطلب",
+    "remove": "إزالة"
+  },
+  "checkout": {
+    "fullName": "الاسم الكامل",
+    "phoneNumber": "رقم الهاتف",
+    "detailedAddress": "العنوان الكامل",
+    "confirm": "تأكيد",
+    "validation": {
+      "nameRequired": "الاسم مطلوب.",
+      "nameMin": "يجب أن يحتوي الاسم على 3 أحرف على الأقل.",
+      "phoneRequired": "رقم الهاتف مطلوب.",
+      "phoneDigits": "يجب أن يحتوي رقم الهاتف على أرقام فقط.",
+      "phoneMin": "يجب أن يحتوي رقم الهاتف على 10 أرقام على الأقل.",
+      "addressRequired": "العنوان مطلوب.",
+      "addressMin": "يرجى إدخال عنوان كامل يحتوي على 15 حرفًا على الأقل."
+    }
+  },
+  "orders": {
+    "details": "تفاصيل الطلب",
+    "totalPrice": "السعر الإجمالي",
+    "date": "التاريخ"
+  },
+  "tabs": {
+    "home": "الرئيسية",
+    "profile": "الملف الشخصي",
+    "cart": "سلة التسوق"
+  }
+}

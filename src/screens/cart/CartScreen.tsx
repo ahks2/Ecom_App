@@ -24,8 +24,10 @@ import {
   removeProductFromCart,
 } from "../../store/reducers/CartSlice";
 import { taxes, shippingFees } from "../../constants/Constants";
+import { useTranslation } from "react-i18next";
 
 const CartScreen = () => {
+  const { t } = useTranslation();
   const navigation = useNavigation();
   const { items } = useSelector((state: RootState) => state.cartSlice);
   const dispatch = useDispatch();
@@ -35,7 +37,6 @@ const CartScreen = () => {
     : 0;
   return (
     <AppSafeView>
-      <HomeHeader />
       {!totalProductsPriceSum ? (
         <EmptyCartScreen />
       ) : (
@@ -61,7 +62,7 @@ const CartScreen = () => {
             Shipping_Fee={totalProductsPriceSum ? shippingFees : 0}
           />
           <AppButton
-            title="Continue"
+            title={t("cart.continue")}
             onPress={() => navigation.navigate("CheckoutScreen")}
           />
         </View>

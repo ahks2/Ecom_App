@@ -8,8 +8,6 @@ import { Orders } from "../../data/Orders";
 const MyOrdersScreen = () => {
   return (
     <AppSafeView>
-      <HomeHeader />
-
       <FlatList
         data={Orders}
         keyExtractor={(item) => item.id.toString()}

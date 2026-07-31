@@ -6,7 +6,6 @@ import AppText from "../texts/AppText";
 import { AppFonts } from "../../styles/Fonts";
 import { Ionicons } from "@expo/vector-icons";
 import { commonStyles } from "../../styles/SharedStyles";
-
 interface ProductCardProps {
   onAddToCardPress: () => void;
   imageURL: string;

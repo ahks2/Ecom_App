@@ -1,0 +1,82 @@
+{
+  "app": {
+    "name": "Smart E-Commerce"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Password",
+    "login": "Login",
+    "signUp": "Sign Up",
+    "userName": "User Name",
+    "createAccount": "Create New Account",
+    "goToSignIn": "Go To Sign In"
+  },
+  "validation": {
+    "emailRequired": "Email is required.",
+    "invalidEmail": "Please enter a valid email.",
+    "passwordRequired": "Password is required.",
+    "passwordMin": "Password must be at least 6 characters.",
+    "userNameRequired": "User name is required.",
+    "userNameMin": "User name must be at least 5 characters."
+  },
+  "messages": {
+    "userCreated": "User created successfully.",
+    "userNotFound": "User not found.",
+    "wrongCredentials": "Wrong email or password.",
+    "emailAlreadyInUse": "This email is already in use.",
+    "weakPassword": "The password is too weak.",
+    "genericError": "An unexpected error occurred."
+  },
+  "profile": {
+    "hello": "Hello",
+    "myOrders": "My Orders",
+    "language": "Language",
+    "logout": "Logout"
+  },
+  "language": {
+    "title": "Change Language",
+    "english": "English",
+    "arabic": "Arabic",
+    "confirm": "Confirm"
+  },
+  "cart": {
+    "continue": "Continue",
+    "emptyTitle": "Your Cart is Empty",
+    "emptySubtitle": "Browse our products and find something you like.",
+    "startShopping": "Start Shopping",
+    "title": "Shopping Cart",
+    "empty": "Your cart is empty.",
+
+    "checkout": "Checkout",
+    "itemsPrice": "Items Price",
+    "shippingFee": "Shipping Fee",
+    "taxes": "Taxes",
+    "orderTotal": "Order Total",
+    "remove": "Remove"
+  },
+  "checkout": {
+    "fullName": "Full Name",
+    "phoneNumber": "Phone Number",
+    "detailedAddress": "Full Address",
+    "confirm": "Confirm",
+    "validation": {
+      "nameRequired": "Name is required.",
+      "nameMin": "Name must contain at least 3 characters.",
+      "phoneRequired": "Phone number is required.",
+      "phoneDigits": "Phone number must contain only digits.",
+      "phoneMin": "Phone number must contain at least 10 digits.",
+      "addressRequired": "Address is required.",
+      "addressMin": "Please enter a full address with at least 15 characters."
+    }
+  },
+  "orders": {
+    "details": "Order Details",
+    "totalPrice": "Total Price",
+    "date": "Date"
+  },
+  "tabs": {
+    "home": "Home",
+    "profile": "Profile",
+    "cart": "Cart"
+  }
+}

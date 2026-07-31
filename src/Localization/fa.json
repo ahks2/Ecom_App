@@ -1,0 +1,82 @@
+{
+  "app": {
+    "name": "تجارت الکترونیک هوشمند"
+  },
+  "auth": {
+    "email": "ایمیل",
+    "password": "رمز عبور",
+    "login": "ورود",
+    "signUp": "ثبت‌نام",
+    "userName": "نام کاربری",
+    "createAccount": "ایجاد حساب جدید",
+    "goToSignIn": "رفتن به صفحه ورود"
+  },
+  "validation": {
+    "emailRequired": "ایمیل الزامی است.",
+    "invalidEmail": "لطفاً یک ایمیل معتبر وارد کنید.",
+    "passwordRequired": "رمز عبور الزامی است.",
+    "passwordMin": "رمز عبور باید حداقل ۶ کاراکتر باشد.",
+    "userNameRequired": "نام کاربری الزامی است.",
+    "userNameMin": "نام کاربری باید حداقل ۵ کاراکتر باشد."
+  },
+  "messages": {
+    "userCreated": "کاربر با موفقیت ایجاد شد.",
+    "userNotFound": "کاربر پیدا نشد.",
+    "wrongCredentials": "ایمیل یا رمز عبور اشتباه است.",
+    "emailAlreadyInUse": "این ایمیل قبلاً استفاده شده است.",
+    "weakPassword": "رمز عبور ضعیف است.",
+    "genericError": "خطای غیرمنتظره‌ای رخ داد."
+  },
+  "profile": {
+    "hello": "سلام",
+    "myOrders": "سفارش‌های من",
+    "language": "زبان",
+    "logout": "خروج"
+  },
+  "language": {
+    "title": "تغییر زبان",
+    "english": "انگلیسی",
+    "arabic": "عربی",
+    "confirm": "تأیید"
+  },
+  "cart": {
+    "continue": "ادامه",
+    "emptyTitle": "سبد خرید شما خالی است",
+    "emptySubtitle": "محصولات ما را بررسی کنید و چیزی که دوست دارید پیدا کنید.",
+    "startShopping": "شروع خرید",
+    "title": "سبد خرید",
+    "empty": "سبد خرید شما خالی است.",
+
+    "checkout": "تسویه حساب",
+    "itemsPrice": "قیمت محصولات",
+    "shippingFee": "هزینه ارسال",
+    "taxes": "مالیات",
+    "orderTotal": "مجموع سفارش",
+    "remove": "حذف"
+  },
+  "checkout": {
+    "fullName": "نام کامل",
+    "phoneNumber": "شماره تلفن",
+    "detailedAddress": "آدرس کامل",
+    "confirm": "تأیید",
+    "validation": {
+      "nameRequired": "نام الزامی است.",
+      "nameMin": "نام باید حداقل ۳ کاراکتر باشد.",
+      "phoneRequired": "شماره تلفن الزامی است.",
+      "phoneDigits": "شماره تلفن باید فقط شامل اعداد باشد.",
+      "phoneMin": "شماره تلفن باید حداقل ۱۰ رقم باشد.",
+      "addressRequired": "آدرس الزامی است.",
+      "addressMin": "لطفاً یک آدرس کامل با حداقل ۱۵ کاراکتر وارد کنید."
+    }
+  },
+  "orders": {
+    "details": "جزئیات سفارش",
+    "totalPrice": "قیمت کل",
+    "date": "تاریخ"
+  },
+  "tabs": {
+    "home": "خانه",
+    "profile": "پروفایل",
+    "cart": "سبد خرید"
+  }
+}

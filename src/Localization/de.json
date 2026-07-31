@@ -1,0 +1,82 @@
+{
+  "app": {
+    "name": "Intelligenter E-Commerce"
+  },
+  "auth": {
+    "email": "E-Mail",
+    "password": "Passwort",
+    "login": "Anmelden",
+    "signUp": "Registrieren",
+    "userName": "Benutzername",
+    "createAccount": "Neues Konto erstellen",
+    "goToSignIn": "Zur Anmeldung gehen"
+  },
+  "validation": {
+    "emailRequired": "E-Mail ist erforderlich.",
+    "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+    "passwordRequired": "Passwort ist erforderlich.",
+    "passwordMin": "Das Passwort muss mindestens 6 Zeichen enthalten.",
+    "userNameRequired": "Benutzername ist erforderlich.",
+    "userNameMin": "Der Benutzername muss mindestens 5 Zeichen enthalten."
+  },
+  "messages": {
+    "userCreated": "Benutzer erfolgreich erstellt.",
+    "userNotFound": "Benutzer nicht gefunden.",
+    "wrongCredentials": "Falsche E-Mail oder falsches Passwort.",
+    "emailAlreadyInUse": "Diese E-Mail-Adresse wird bereits verwendet.",
+    "weakPassword": "Das Passwort ist zu schwach.",
+    "genericError": "Ein unerwarteter Fehler ist aufgetreten."
+  },
+  "profile": {
+    "hello": "Hallo",
+    "myOrders": "Meine Bestellungen",
+    "language": "Sprache",
+    "logout": "Abmelden"
+  },
+  "language": {
+    "title": "Sprache ändern",
+    "english": "Englisch",
+    "arabic": "Arabisch",
+    "confirm": "Bestätigen"
+  },
+  "cart": {
+    "continue": "Weiter",
+    "emptyTitle": "Ihr Warenkorb ist leer",
+    "emptySubtitle": "Durchsuchen Sie unsere Produkte und finden Sie etwas, das Ihnen gefällt.",
+    "startShopping": "Einkaufen starten",
+    "title": "Warenkorb",
+    "empty": "Ihr Warenkorb ist leer.",
+
+    "checkout": "Zur Kasse",
+    "itemsPrice": "Produktpreis",
+    "shippingFee": "Versandkosten",
+    "taxes": "Steuern",
+    "orderTotal": "Gesamtsumme",
+    "remove": "Entfernen"
+  },
+  "checkout": {
+    "fullName": "Vollständiger Name",
+    "phoneNumber": "Telefonnummer",
+    "detailedAddress": "Vollständige Adresse",
+    "confirm": "Bestätigen",
+    "validation": {
+      "nameRequired": "Name ist erforderlich.",
+      "nameMin": "Der Name muss mindestens 3 Zeichen enthalten.",
+      "phoneRequired": "Telefonnummer ist erforderlich.",
+      "phoneDigits": "Die Telefonnummer darf nur Zahlen enthalten.",
+      "phoneMin": "Die Telefonnummer muss mindestens 10 Ziffern enthalten.",
+      "addressRequired": "Adresse ist erforderlich.",
+      "addressMin": "Bitte geben Sie eine vollständige Adresse mit mindestens 15 Zeichen ein."
+    }
+  },
+  "orders": {
+    "details": "Bestelldetails",
+    "totalPrice": "Gesamtpreis",
+    "date": "Datum"
+  },
+  "tabs": {
+    "home": "Startseite",
+    "profile": "Profil",
+    "cart": "Warenkorb"
+  }
+}

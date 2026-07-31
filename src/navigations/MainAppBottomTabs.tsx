@@ -7,10 +7,12 @@ import { vs, s } from "react-native-size-matters";
 import { Ionicons, FontAwesome } from "@expo/vector-icons";
 import { IS_Android } from "../constants/Constants";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { useTranslation } from "react-i18next";
 const Tab = createBottomTabNavigator();
 
 export default function MainAppBottomTabs() {
   const insets = useSafeAreaInsets();
+  const { t } = useTranslation();
   return (
     <Tab.Navigator
       screenOptions={{
@@ -34,7 +36,7 @@ export default function MainAppBottomTabs() {
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="home" size={size} color={color} />
           ),
-          title: "Home",
+          title: t("tabs.home"),
         }}
       />
       <Tab.Screen
@@ -44,7 +46,7 @@ export default function MainAppBottomTabs() {
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="cart" size={size} color={color} />
           ),
-          title: "Cart",
+          title: t("tabs.cart"),
         }}
       />
       <Tab.Screen
@@ -54,7 +56,7 @@ export default function MainAppBottomTabs() {
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="person" size={size} color={color} />
           ),
-          title: "Profile",
+          title: t("tabs.profile"),
         }}
       />
     </Tab.Navigator>

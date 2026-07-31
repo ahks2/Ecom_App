@@ -1,32 +1,82 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import React from "react";
 import AppSafeView from "../../components/Views/AppSafeView";
-import HomeHeader from "../../components/headers/HomeHeader";
-import AppText from "../../components/texts/AppText";
 import {
   commonStyles,
   sharedPaddingHorizontal,
 } from "../../styles/SharedStyles";
 import AppColors from "../../styles/Colors";
 import { vs, s } from "react-native-size-matters";
-import AppTextInputs from "../../components/inputs/AppTextInputs";
 import AppButton from "../../components/Buttons/AppButton";
+import { useForm } from "react-hook-form";
+import AppTextInputsController from "../../components/inputs/AppTextInputsController";
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { useTranslation } from "react-i18next";
 
 const CheckoutScreen = () => {
+  const { t } = useTranslation();
+
+  const schema = yup
+    .object({
+      fullName: yup
+        .string()
+        .required(t("checkout.validation.nameRequired"))
+        .min(3, t("checkout.validation.nameMin")),
+
+      phoneNumber: yup
+        .string()
+        .required(t("checkout.validation.phoneRequired"))
+        .matches(/^[0-9]+$/, t("checkout.validation.phoneDigits"))
+        .min(10, t("checkout.validation.phoneMin")),
+
+      detailedAddress: yup
+        .string()
+        .required(t("checkout.validation.addressRequired"))
+        .min(15, t("checkout.validation.addressMin")),
+    })
+    .required();
+
+  type FormData = yup.InferType<typeof schema>;
+
+  const { control, handleSubmit } = useForm<FormData>({
+    resolver: yupResolver(schema),
+  });
+
+  const saveOrder = (formData: FormData) => {
+    console.log(formData);
+  };
+
   return (
     <AppSafeView>
-      <HomeHeader />
       <View style={{ flex: 1 }}>
         <View style={styles.inputsContainer}>
-          <AppTextInputs placeholder="Full Name" />
-          <AppTextInputs placeholder="Phone Number" />
-          <AppTextInputs placeholder="Detailed Address" />
+          <AppTextInputsController
+            control={control}
+            name="fullName"
+            placeholder={t("checkout.fullName")}
+          />
+
+          <AppTextInputsController
+            control={control}
+            name="phoneNumber"
+            placeholder={t("checkout.phoneNumber")}
+          />
+
+          <AppTextInputsController
+            control={control}
+            name="detailedAddress"
+            placeholder={t("checkout.detailedAddress")}
+          />
         </View>
       </View>
+
       <View style={styles.bottomButtonContainer}>
-        <AppButton title="Confirm" />
+        <AppButton
+          title={t("checkout.confirm")}
+          onPress={handleSubmit(saveOrder)}
+        />
       </View>
-      <View />
     </AppSafeView>
   );
 };
@@ -42,6 +92,7 @@ const styles = StyleSheet.create({
     backgroundColor: AppColors.white,
     marginTop: vs(1),
   },
+
   bottomButtonContainer: {
     paddingHorizontal: sharedPaddingHorizontal,
     position: "absolute",

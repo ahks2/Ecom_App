@@ -18,9 +18,11 @@ interface AppSafeViewProps {
 
 const AppSafeView: FC<AppSafeViewProps> = ({ children, style }) => {
   return (
-    <SafeAreaView style={styles.safeArea} edges={["top"]}>
-      <View style={[styles.container, style]}>{children}</View>
-    </SafeAreaView>
+    <SafeAreaProvider>
+      <SafeAreaView style={styles.safeArea} edges={["top"]}>
+        <View style={[styles.container, style]}>{children}</View>
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 };
 
